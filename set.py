@@ -1,38 +1,35 @@
 import csv,time
 
-def find(storage,query):
+storage1 = [0]*(10**8)
+
+def find(storage1,query):
     flag = False
     ans = []
     count = 0
-    for i in storage:
-        if query.lower() in i.lower():
-            flag = True
-            ans.append(i)
-            count += 1
+    val = hash(query)%(10**8)
+    if storage1[val] == 1:
+        flag = True
+        count += 1
     return flag,ans,count
 
 with open('Dataset/netflix_titles.csv', encoding="utf-8") as csvfile1:
-    reader = csv.reader(csvfile1)
-    storage1 = list()
+    reader = csv.reader(csvfile1) 
     for row in reader:
-        storage1.append(row[2])
+        val = hash(row[2])%(10**8)
+        storage1[val] = 1
     csvfile1.close()
 
 with open('Dataset/tmdb_5000_movies.csv', encoding="utf-8") as csvfile2:
     reader2 = csv.reader(csvfile2)
-    storage2 = list()
     for row in reader2:
-        storage2.append(row[6])
+        val = hash(row[6])%(10**8)
+        storage1[val] = 1
     csvfile2.close()
 
-    final_storage = storage1 + storage2
-
-    final_storage = sorted(final_storage)
-    
     print("Enter the name of the movie you want to search: ")
     query = input()
     start_time = time.time()
-    flag,ans,count = find(final_storage,query)
+    flag,ans,count = find(storage1,query)
     if(flag):
         print("%s number of occurences found!" %count)
         for i in ans:

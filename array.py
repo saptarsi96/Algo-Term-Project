@@ -5,7 +5,7 @@ def find(storage,query):
     ans = []
     count = 0
     for i in storage:
-        if query.lower() in i.lower():
+        if query.lower() == i.lower():
             flag = True
             ans.append(i)
             count += 1
