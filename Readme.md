@@ -6,3 +6,8 @@ This project involves different distinct counting algorithms whereby we try to i
 - [x] Shailesh Navale
 - [x] Madhur Navandar
 - [x] Saptarsi Saha
+
+**Initial time-complexity analysis for some famous movies**
+
+
+![](https://github.com/saptarsi96/Algo-Term-Project/blob/main/Pictures/Array%20vs%20Hash-Set.png)
