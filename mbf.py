@@ -17,6 +17,7 @@ with open('Dataset/updated_urls3.csv') as csvfile1:
     reader = csv.reader(csvfile1)
     for row in reader:
         query = row[7]
+        query = query.replace("https://","")
         query = query.split('/')
         for i in query:
             bloomf.add(i)
