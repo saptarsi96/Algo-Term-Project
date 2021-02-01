@@ -4,6 +4,7 @@ import os
 import random
 import pandas as pd
 from bf2 import MultiBF
+from bloomfilter import BloomFilter
 
 # example usage: python split.py example.csv 200
 # above command would split the `example.csv` into smaller CSV files of 200 rows each (with header included)
@@ -50,6 +51,7 @@ As all the values are unique.
 If it is present in both at the same time it is obviously a false positive!
 '''
 false_positive = 0
+false_positive_bloom = 0
 
 mlbf1 = MultiBF(2,800000)
 print("number of layers",mlbf1.layers)
@@ -61,6 +63,14 @@ with open('url_1.csv', encoding="utf-8") as csvfile1:
         query = row[1]
         mlbf1.add(query)
 
+bf1 = BloomFilter(800000,0.05)
+with open('url_1.csv', encoding="utf-8") as csvfile1:
+    reader = csv.reader(csvfile1)
+    i=0
+    for row in reader:
+        query = row[1]
+        bf1.add(query)
+
 mlbf2 = MultiBF(2,800000)
 print("number of layers",mlbf2.layers)
 print("number of hash functions determined",mlbf2.hash_count)
@@ -71,6 +81,14 @@ with open('url_2.csv', encoding="utf-8") as csvfile1:
         query = row[1]
         mlbf2.add(query)
 
+bf2 = BloomFilter(800000,0.05)
+with open('url_2.csv', encoding="utf-8") as csvfile1:
+    reader = csv.reader(csvfile1)
+    i=0
+    for row in reader:
+        query = row[1]
+        bf2.add(query)
+
 with open('test.csv', encoding="utf-8") as csvfile1:
     reader = csv.reader(csvfile1)
     i=0
@@ -79,7 +97,18 @@ with open('test.csv', encoding="utf-8") as csvfile1:
         if mlbf1.check(query) and mlbf2.check(query) == True:
             false_positive += 1
 
-print("The total number of false positives are : "+str(false_positive))
+with open('test.csv', encoding="utf-8") as csvfile1:
+    reader = csv.reader(csvfile1)
+    i=0
+    for row in reader:
+        query = row[1]
+        if bf1.check(query) and bf2.check(query) == True:
+            false_positive_bloom += 1
+
+print("The total number of false positives in mbf are : "+str(false_positive))
+print("The percentage of false positives in mlbf is :"+str((false_positive/1515223)*100))
+print("The total number of false positives in bf are : "+str(false_positive_bloom))
+print("The percentage of false positives in bf is :"+str((false_positive_bloom/1515223)*100))
 
 
 
