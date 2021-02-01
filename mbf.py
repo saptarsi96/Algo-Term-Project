@@ -2,31 +2,25 @@
 # -*- coding: utf-8 -*-
 from bloomfilter import BloomFilter
 from random import shuffle
+from bf2 import MultiBF
 import csv
 import time
 
-n = 7000  # no of items to add
-p = 0.05  # false positive probability
-
-bloomf = BloomFilter(n, p)
-print('Size of bit array:{}'.format(bloomf.size))
-print('False positive Probability:{}'.format(bloomf.fp_prob))
-print('Number of hash functions:{}'.format(bloomf.hash_count))
-
-with open('Dataset/updated_urls3.csv') as csvfile1:
+mlbf = MultiBF(2,12000)
+print("number of layers",mlbf.layers)
+print("number of hash functions determined",mlbf.hash_count)
+with open('Dataset/updated_urls3.csv', encoding="utf-8") as csvfile1:
     reader = csv.reader(csvfile1)
+    i=0
     for row in reader:
         query = row[7]
-        query = query.replace("https://","")
-        query = query.split('/')
-        for i in query:
-            bloomf.add(i)
+        mlbf.add(query)
 
-print('Enter the name of the url you want to search: ')
+print("Enter the name of the movie you want to search: ")
 query = input()
 start_time = time.time()
-if bloomf.check(query):
-    print("'{}' is probably present".format(query))
+if mlbf.check(query):
+	print("'{}' is probably present".format(query))
 else:
-    print("'{}' is definitely not present".format(query))
-print('The runtime of the program is : %s' % (time.time() - start_time))
+	print("'{}' is definitely not present".format(query))
+print("The runtime of the program is : %s" %(time.time()-start_time))

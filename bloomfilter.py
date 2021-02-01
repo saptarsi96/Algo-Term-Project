@@ -39,6 +39,22 @@ class BloomFilter(object):
 		'''
 		Add an item in the filter
 		'''
+		digests = self.getDigests(item)
+		for i in range(self.hash_count):
+
+			# create digest for given item.
+			# i work as seed to mmh3.hash() function
+			# With different seed, digest created is different
+			#digest = mmh3.hash(item, i) % self.size
+			#digests.append(digest)
+			# set the bit True in bit_array
+			self.bit_array[digests[i]] = True
+		return digests
+	
+	def getDigests(self, item):
+		'''
+		Add an item in the filter
+		'''
 		digests = []
 		for i in range(self.hash_count):
 
@@ -47,10 +63,8 @@ class BloomFilter(object):
 			# With different seed, digest created is different
 			digest = mmh3.hash(item, i) % self.size
 			digests.append(digest)
-
-			# set the bit True in bit_array
-			self.bit_array[digest] = True
-
+		return digests
+			
 	def check(self, item):
 		'''
 		Check for existence of an item in filter
@@ -92,6 +106,5 @@ class BloomFilter(object):
 			number of items expected to be stored in filter
 		'''
 		k = (m/n) * math.log(2)
-		k = 30	
 		return int(k)
 
