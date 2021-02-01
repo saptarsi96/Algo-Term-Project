@@ -45,7 +45,8 @@ with open(filename) as infile:
 os.system("shuf -n 800000 url.csv > test.csv") #to generate random permuations for Part C
 
 '''
-We need to test if C is possible in A and B at the same time or not.
+We need to test if C is present in A and B at the same time or not.
+As all the values are unique. 
 If it is present in both at the same time it is obviously a false positive!
 '''
 false_positive = 0
