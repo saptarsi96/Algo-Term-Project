@@ -3,6 +3,7 @@ import sys
 import os
 import random
 import pandas as pd
+from bf2 import MultiBF
 
 # example usage: python split.py example.csv 200
 # above command would split the `example.csv` into smaller CSV files of 200 rows each (with header included)
@@ -42,3 +43,45 @@ with open(filename) as infile:
         print('DONE splitting {} into {} files'.format(filename, len(pages)))
 
 os.system("shuf -n 800000 url.csv > test.csv") #to generate random permuations for Part C
+
+'''
+We need to test if C is possible in A and B at the same time or not.
+If it is present in both at the same time it is obviously a false positive!
+'''
+false_positive = 0
+
+mlbf1 = MultiBF(2,800000)
+print("number of layers",mlbf1.layers)
+print("number of hash functions determined",mlbf1.hash_count)
+with open('url_1.csv', encoding="utf-8") as csvfile1:
+    reader = csv.reader(csvfile1)
+    i=0
+    for row in reader:
+        query = row[1]
+        mlbf1.add(query)
+
+mlbf2 = MultiBF(2,800000)
+print("number of layers",mlbf2.layers)
+print("number of hash functions determined",mlbf2.hash_count)
+with open('url_2.csv', encoding="utf-8") as csvfile1:
+    reader = csv.reader(csvfile1)
+    i=0
+    for row in reader:
+        query = row[1]
+        mlbf2.add(query)
+
+with open('test.csv', encoding="utf-8") as csvfile1:
+    reader = csv.reader(csvfile1)
+    i=0
+    for row in reader:
+        query = row[1]
+        if mlbf1.check(query) and mlbf2.check(query) == True:
+            false_positive += 1
+
+print("The total number of false positives are : "+str(false_positive))
+
+
+
+
+
+
