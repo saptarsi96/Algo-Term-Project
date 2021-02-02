@@ -1,0 +1,60 @@
+The total number of false positives in mbf are : 11801
+The percentage of false positives in mlbf is :0.7788292548357568
+The total number of false positives in bf are : 44360
+The percentage of false positives in bf is :2.927621874799947
+The total number of false positives in mbf are : 11597
+The percentage of false positives in mlbf is :0.765365890037308
+The total number of false positives in bf are : 44106
+The percentage of false positives in bf is :2.9108586656881528
+The total number of false positives in mbf are : 11535
+The percentage of false positives in mlbf is :0.7612740830887599
+The total number of false positives in bf are : 43953
+The percentage of false positives in bf is :2.9007611420893165
+The total number of false positives in mbf are : 11679
+The percentage of false positives in mlbf is :0.7707776347111943
+The total number of false positives in bf are : 44219
+The percentage of false positives in bf is :2.9183163138363133
+The total number of false positives in mbf are : 11673
+The percentage of false positives in mlbf is :0.7703816533935929
+The total number of false positives in bf are : 44137
+The percentage of false positives in bf is :2.9129045691624267
+The total number of false positives in mbf are : 11563
+The percentage of false positives in mlbf is :0.7631219959042332
+The total number of false positives in bf are : 43982
+The percentage of false positives in bf is :2.9026750517910567
+The total number of false positives in mbf are : 11698
+The percentage of false positives in mlbf is :0.7720315755502656
+The total number of false positives in bf are : 44147
+The percentage of false positives in bf is :2.913564538025096
+The total number of false positives in mbf are : 11688
+The percentage of false positives in mlbf is :0.7713716066875964
+The total number of false positives in bf are : 43998
+The percentage of false positives in bf is :2.9037310019713267
+The total number of false positives in mbf are : 11646
+The percentage of false positives in mlbf is :0.7685997374643865
+The total number of false positives in bf are : 44146
+The percentage of false positives in bf is :2.913498541138829
+The total number of false positives in mbf are : 11631
+The percentage of false positives in mlbf is :0.7676097841703828
+The total number of false positives in bf are : 44323
+The percentage of false positives in bf is :2.9251799900080715
+The total number of false positives in mbf are : 11599
+The percentage of false positives in mlbf is :0.7654978838098419
+The total number of false positives in bf are : 44119
+The percentage of false positives in bf is :2.9117166252096225
+The total number of false positives in mbf are : 11775
+The percentage of false positives in mlbf is :0.7771133357928173
+The total number of false positives in bf are : 44470
+The percentage of false positives in bf is :2.9348815322893067
+The total number of false positives in mbf are : 11592
+The percentage of false positives in mlbf is :0.7650359056059735
+The total number of false positives in bf are : 44325
+The percentage of false positives in bf is :2.925311983780605
+The total number of false positives in mbf are : 11883
+The percentage of false positives in mlbf is :0.7842409995096432
+The total number of false positives in bf are : 44360
+The percentage of false positives in bf is :2.927621874799947
+The total number of false positives in mbf are : 11585
+The percentage of false positives in mlbf is :0.7645739274021052
+The total number of false positives in bf are : 43907
+The percentage of false positives in bf is :2.8977252853210387

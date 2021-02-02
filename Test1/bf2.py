@@ -25,14 +25,14 @@ class MultiBF:
 		for i in range(newcount - self.layers):
 			self.bloomfilters.append(BloomFilter(self.totalitems,0.05))
 		self.layers = newcount
-		print("update the total number of layers to:",self.layers)
+		#print("update the total number of layers to:",self.layers)
 	
 	def add(self,query):
 		query = query.replace("https://","")
 		query = query.replace("http://","")
 		query = query.split("/")
 		if len(query) > self.layers:
-			print("adding more layers")
+			#print("adding more layers")
 			self.addLayers(len(query))	
 		laddr = [0]*self.hash_count
 		for i in range(len(query)):

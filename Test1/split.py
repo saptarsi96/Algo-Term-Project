@@ -41,7 +41,7 @@ with open(filename) as infile:
             for row in page:
                 writer.writerow(row)
 
-        print('DONE splitting {} into {} files'.format(filename, len(pages)))
+        #print('DONE splitting {} into {} files'.format(filename, len(pages)))
 
 os.system("shuf -n 800000 url.csv > test.csv") #to generate random permuations for Part C
 
@@ -54,8 +54,8 @@ false_positive = 0
 false_positive_bloom = 0
 
 mlbf1 = MultiBF(2,800000)
-print("number of layers",mlbf1.layers)
-print("number of hash functions determined",mlbf1.hash_count)
+#print("number of layers",mlbf1.layers)
+#print("number of hash functions determined",mlbf1.hash_count)
 with open('url_1.csv', encoding="utf-8") as csvfile1:
     reader = csv.reader(csvfile1)
     i=0
@@ -72,8 +72,8 @@ with open('url_1.csv', encoding="utf-8") as csvfile1:
         bf1.add(query)
 
 mlbf2 = MultiBF(2,800000)
-print("number of layers",mlbf2.layers)
-print("number of hash functions determined",mlbf2.hash_count)
+#print("number of layers",mlbf2.layers)
+#print("number of hash functions determined",mlbf2.hash_count)
 with open('url_2.csv', encoding="utf-8") as csvfile1:
     reader = csv.reader(csvfile1)
     i=0
