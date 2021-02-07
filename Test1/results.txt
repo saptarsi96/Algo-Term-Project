@@ -1,0 +1,13 @@
+rows per csv 800000
+rows per csv 800000
+The total number of false positives in mbf are : 11737
+The percentage of false positives in mlbf is :0.7746054541146749
+The total number of false positives in bf are : 44259
+The percentage of false positives in bf is :2.9209561892869895
+url.csv
+1562978
+1562978
+The total number of false positives in mbf are : 16312
+The percentage of false positives in mlbf is :1.0436487269814418
+The total number of false positives in bf are : 50498
+The percentage of false positives in bf is :3.230883608086614

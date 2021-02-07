@@ -1,7 +1,7 @@
 import csv
 import sys
 import os
-import random
+import random, math
 import pandas as pd
 from bf2 import MultiBF
 from bloomfilter import BloomFilter
@@ -19,8 +19,11 @@ filename = sys.argv[1]
 full_file_path = os.path.join(CURRENT_DIR, filename)
 file_name = os.path.splitext(full_file_path)[0]
 
-rows_per_csv = int(sys.argv[2]) if len(sys.argv) > 2 else 5000
 
+total_length = len(open(sys.argv[1],'r').readlines())
+rows_per_csv = math.ceil(total_length/2)
+#print(total_length)
+#exit()
 with open(filename) as infile:
     reader = csv.DictReader(infile)
     header = reader.fieldnames
@@ -43,7 +46,7 @@ with open(filename) as infile:
 
         #print('DONE splitting {} into {} files'.format(filename, len(pages)))
 
-os.system("shuf -n 800000 url.csv > test.csv") #to generate random permuations for Part C
+os.system("shuf -n"+str(rows_per_csv)+" url.csv > test.csv") #to generate random permuations for Part C
 
 '''
 We need to test if C is present in A and B at the same time or not.
@@ -53,7 +56,7 @@ If it is present in both at the same time it is obviously a false positive!
 false_positive = 0
 false_positive_bloom = 0
 
-mlbf1 = MultiBF(2,800000)
+mlbf1 = MultiBF(2,rows_per_csv)
 #print("number of layers",mlbf1.layers)
 #print("number of hash functions determined",mlbf1.hash_count)
 with open('url_1.csv', encoding="utf-8") as csvfile1:
@@ -63,7 +66,7 @@ with open('url_1.csv', encoding="utf-8") as csvfile1:
         query = row[1]
         mlbf1.add(query)
 
-bf1 = BloomFilter(800000,0.05)
+bf1 = BloomFilter(rows_per_csv,0.05)
 with open('url_1.csv', encoding="utf-8") as csvfile1:
     reader = csv.reader(csvfile1)
     i=0
@@ -71,7 +74,7 @@ with open('url_1.csv', encoding="utf-8") as csvfile1:
         query = row[1]
         bf1.add(query)
 
-mlbf2 = MultiBF(2,800000)
+mlbf2 = MultiBF(2,rows_per_csv)
 #print("number of layers",mlbf2.layers)
 #print("number of hash functions determined",mlbf2.hash_count)
 with open('url_2.csv', encoding="utf-8") as csvfile1:
@@ -81,7 +84,7 @@ with open('url_2.csv', encoding="utf-8") as csvfile1:
         query = row[1]
         mlbf2.add(query)
 
-bf2 = BloomFilter(800000,0.05)
+bf2 = BloomFilter(rows_per_csv,0.05)
 with open('url_2.csv', encoding="utf-8") as csvfile1:
     reader = csv.reader(csvfile1)
     i=0
@@ -106,9 +109,9 @@ with open('test.csv', encoding="utf-8") as csvfile1:
             false_positive_bloom += 1
 
 print("The total number of false positives in mbf are : "+str(false_positive))
-print("The percentage of false positives in mlbf is :"+str((false_positive/1515223)*100))
+print("The percentage of false positives in mlbf is :"+str((false_positive/total_length)*100))
 print("The total number of false positives in bf are : "+str(false_positive_bloom))
-print("The percentage of false positives in bf is :"+str((false_positive_bloom/1515223)*100))
+print("The percentage of false positives in bf is :"+str((false_positive_bloom/total_length)*100))
 
 
 
