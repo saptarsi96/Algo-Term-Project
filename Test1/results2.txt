@@ -1,0 +1,36 @@
+Total length of the file is: 422420
+Total size of the file is: 44MB
+The total number of false positives in mbf are : 924
+The percentage of false positives in mlbf is :0.21873964300932722
+The total number of false positives in bf are : 11385
+The percentage of false positives in bf is :2.6951848870792103
+Total length of the file is: 422420
+The total number of false positives in mbf are : 898
+The percentage of false positives in mlbf is :0.21258463140949763
+The total number of false positives in bf are : 11270
+The percentage of false positives in bf is :2.6679607973107333
+Total length of the file is: 422420
+The total number of false positives in mbf are : 913
+The percentage of false positives in mlbf is :0.21613559964016854
+The total number of false positives in bf are : 11281
+The percentage of false positives in bf is :2.670564840679892
+Total length of the file is: 422420
+The total number of false positives in mbf are : 910
+The percentage of false positives in mlbf is :0.2154254059940344
+The total number of false positives in bf are : 11344
+The percentage of false positives in bf is :2.6854789072487097
+Total length of the file is: 422420
+The total number of false positives in mbf are : 937
+The percentage of false positives in mlbf is :0.221817148809242
+The total number of false positives in bf are : 11400
+The percentage of false positives in bf is :2.6987358553098812
+Total length of the file is: 422420
+The total number of false positives in mbf are : 936
+The percentage of false positives in mlbf is :0.2215804175938639
+The total number of false positives in bf are : 11454
+The percentage of false positives in bf is :2.711519340940296
+Total length of the file is: 422420
+The total number of false positives in mbf are : 942
+The percentage of false positives in mlbf is :0.22300080488613228
+The total number of false positives in bf are : 11385
+The percentage of false positives in bf is :2.6951848870792103
