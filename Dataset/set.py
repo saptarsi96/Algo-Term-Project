@@ -12,7 +12,7 @@ def find(storage1,query):
         count += 1
     return flag,ans,count
 
-with open('netflix_titles.csv', encoding="utf-8") as csvfile1:
+with open('url.csv', encoding="utf-8") as csvfile1:
     reader = csv.reader(csvfile1) 
     for row in reader:
         val = hash(row[2])%(10**8)
@@ -21,10 +21,10 @@ with open('netflix_titles.csv', encoding="utf-8") as csvfile1:
 
 os.system("shuf -n 800000 url.csv > test.csv")
 
-query = input()
+#query = input()
 start_time = time.time()
 with open('test.csv', encoding="utf-8") as tester:
-    reader = csv.reader(csvfile1) 
+    reader = csv.reader(tester) 
     for row in reader:
     	query = row[2]
     	flag,ans,count = find(storage1,query)

@@ -1,0 +1,10 @@
+The runtime of the program is : 0.9096026420593262
+The runtime of the program is : 0.7842061519622803
+The runtime of the program is : 0.8831789493560791
+The runtime of the program is : 0.7980895042419434
+The runtime of the program is : 0.8455255031585693
+The runtime of the program is : 0.7987041473388672
+The runtime of the program is : 0.8145778179168701
+The runtime of the program is : 0.8351535797119141
+The runtime of the program is : 0.8363125324249268
+The runtime of the program is : 0.8055830001831055
