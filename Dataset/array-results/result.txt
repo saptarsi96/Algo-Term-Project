@@ -1,6 +1,6 @@
 For the sake of simplicity, we conclude the experiment at 70+ mins.
 O(1) time in hashing is 1 secs appx
-O(n) time for 800000 inputs will be appx 222 hours*
+O(n) time for 800000 inputs will be appx 222 hours* //Please recheck calculations
 For a small input of 100 values := 
 ```
 saptarsi@saptarsi-GF63-8RC:~/Algo-Term-Project/Dataset$ python3 array.py
