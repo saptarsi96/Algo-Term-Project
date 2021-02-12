@@ -1,0 +1,25 @@
+The insertion time of the hash is : 1.33083176612854
+The query time of the hash is : 0.8408360481262207
+The insertion time of the hash is : 1.3218398094177246
+The query time of the hash is : 0.8054406642913818
+The insertion time of the hash is : 1.4153337478637695
+The query time of the hash is : 0.8267905712127686
+The insertion time of the hash is : 1.3079166412353516
+The query time of the hash is : 0.8479924201965332
+The insertion time of the hash is : 1.3775391578674316
+The query time of the hash is : 0.8293428421020508
+1827668
+The insertion time of the hash is : 0.683692216873169
+The query time of the hash is : 0.7083063125610352
+1827668
+The insertion time of the hash is : 1.1654822826385498
+The query time of the hash is : 0.7089269161224365
+1827668
+The insertion time of the hash is : 0.9740986824035645
+The query time of the hash is : 0.6892094612121582
+1827668
+The insertion time of the hash is : 0.6672341823577881
+The query time of the hash is : 0.7106058597564697
+1827668
+The insertion time of the hash is : 0.9719548225402832
+The query time of the hash is : 0.6978013515472412
