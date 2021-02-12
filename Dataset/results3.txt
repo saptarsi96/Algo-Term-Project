@@ -1,0 +1,15 @@
+217528
+The insertion time of the hash is : 0.03318905830383301
+The query time of the hash is : 0.03986239433288574
+217528
+The insertion time of the hash is : 0.031980276107788086
+The query time of the hash is : 0.03933882713317871
+217528
+The insertion time of the hash is : 0.031998395919799805
+The query time of the hash is : 0.03971076011657715
+217528
+The insertion time of the hash is : 0.031758785247802734
+The query time of the hash is : 0.03832268714904785
+217528
+The insertion time of the hash is : 0.032709598541259766
+The query time of the hash is : 0.03708815574645996

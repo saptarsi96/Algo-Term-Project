@@ -1,0 +1,15 @@
+9745518
+The insertion time of the hash is : 1.5448520183563232
+The query time of the hash is : 0.9774541854858398
+9745518
+The insertion time of the hash is : 1.5970127582550049
+The query time of the hash is : 1.0015192031860352
+9745518
+The insertion time of the hash is : 1.6450908184051514
+The query time of the hash is : 1.0109195709228516
+9745518
+The insertion time of the hash is : 1.62467360496521
+The query time of the hash is : 1.0217688083648682
+9745518
+The insertion time of the hash is : 1.6112780570983887
+The query time of the hash is : 1.0390625

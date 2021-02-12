@@ -1,0 +1,24 @@
+The total number of false positives in mbf are : 10224
+The percentage of false positives in mlbf is :3.487991266375546
+The total number of false positives in bf are : 14201
+The percentage of false positives in bf is :4.84477347161572
+The insertion time  of the mlbf program is : 3.3193507194519043
+The insertion time  of the bf program is : 0.9060049057006836
+The query time the mbf program is : 2.2676022052764893
+The query time the bf program is : 0.40758657455444336
+The total number of false positives in mbf are : 10100
+The percentage of false positives in mlbf is :3.4456877729257642
+The total number of false positives in bf are : 14152
+The percentage of false positives in bf is :4.828056768558952
+The insertion time  of the mlbf program is : 3.5969762802124023
+The insertion time  of the bf program is : 1.0843236446380615
+The query time the mbf program is : 2.5958333015441895
+The query time the bf program is : 0.4422299861907959
+The total number of false positives in mbf are : 10198
+The percentage of false positives in mlbf is :3.479121179039301
+The total number of false positives in bf are : 14238
+The percentage of false positives in bf is :4.857396288209607
+The insertion time  of the mlbf program is : 3.6653058528900146
+The insertion time  of the bf program is : 1.027024269104004
+The query time the mbf program is : 2.3989405632019043
+The query time the bf program is : 0.4110143184661865

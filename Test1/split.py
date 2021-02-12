@@ -1,6 +1,6 @@
 import csv
 import sys
-import os
+import os,time
 import random, math
 import pandas as pd
 from bf2 import MultiBF
@@ -59,12 +59,15 @@ false_positive_bloom = 0
 mlbf1 = MultiBF(2,rows_per_csv)
 #print("number of layers",mlbf1.layers)
 #print("number of hash functions determined",mlbf1.hash_count)
+
 with open('url_1.csv', encoding="utf-8") as csvfile1:
     reader = csv.reader(csvfile1)
     i=0
     for row in reader:
         query = row[1]
         mlbf1.add(query)
+
+
 
 bf1 = BloomFilter(rows_per_csv,0.05)
 with open('url_1.csv', encoding="utf-8") as csvfile1:
@@ -73,6 +76,7 @@ with open('url_1.csv', encoding="utf-8") as csvfile1:
     for row in reader:
         query = row[1]
         bf1.add(query)
+
 
 mlbf2 = MultiBF(2,rows_per_csv)
 #print("number of layers",mlbf2.layers)
@@ -112,6 +116,52 @@ print("The total number of false positives in mbf are : "+str(false_positive))
 print("The percentage of false positives in mlbf is :"+str((false_positive/total_length)*100))
 print("The total number of false positives in bf are : "+str(false_positive_bloom))
 print("The percentage of false positives in bf is :"+str((false_positive_bloom/total_length)*100))
+
+
+mlbf = MultiBF(2,rows_per_csv)
+bf = BloomFilter(rows_per_csv,0.05)
+start_time_insertion1 = time.time()
+with open('url.csv', encoding="utf-8") as tester:
+    reader = csv.reader(tester)
+    i=0
+    for row in reader:
+        query = row[1]
+        mlbf.add(query)
+print("The insertion time  of the mlbf program is : %s" %(time.time()-start_time_insertion1))
+
+start_time_insertion2 = time.time()        
+with open('url.csv', encoding="utf-8") as csvfile1:
+    reader = csv.reader(csvfile1)
+    i=0
+    for row in reader:
+        query = row[1]
+        bf.add(query)   
+print("The insertion time  of the bf program is : %s" %(time.time()-start_time_insertion2))             
+
+start_time_query1 = time.time()
+with open('test.csv', encoding="utf-8") as csvfile1:
+    reader = csv.reader(csvfile1)
+    i=0
+    for row in reader:
+        query = row[1]
+        if mlbf.check(query):
+            i += 1
+print("The query time the mbf program is : %s" %(time.time()-start_time_query1))
+
+start_time_query2 = time.time()
+with open('test.csv', encoding="utf-8") as csvfile1:
+    reader = csv.reader(csvfile1)
+    i=0
+    for row in reader:
+        query = row[1]
+        if bf.check(query):
+            i += 1
+print("The query time the bf program is : %s" %(time.time()-start_time_query2))
+
+
+       
+        	
+        
 
 
 

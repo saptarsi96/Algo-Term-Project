@@ -1,0 +1,15 @@
+1827668
+The insertion time of the hash is : 0.5816044807434082
+The query time of the hash is : 0.5627424716949463
+1827668
+The insertion time of the hash is : 0.5554323196411133
+The query time of the hash is : 0.5821685791015625
+1827668
+The insertion time of the hash is : 0.559722900390625
+The query time of the hash is : 0.5566108226776123
+1827668
+The insertion time of the hash is : 0.6347794532775879
+The query time of the hash is : 0.5961198806762695
+1827668
+The insertion time of the hash is : 0.5511109828948975
+The query time of the hash is : 0.6036410331726074
