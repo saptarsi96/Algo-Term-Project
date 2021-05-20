@@ -1,0 +1,8 @@
+The total number of false positives in mbf are : 27396
+The percentage of false positives in mlbf is :2.6126861572265625
+The total number of false positives in bf are : 29617
+The percentage of false positives in bf is :2.8244972229003906
+The insertion time  of the mlbf program is : 16.394160270690918
+The insertion time  of the bf program is : 2.5916762351989746
+The query time the mbf program is : 11.112372636795044
+The query time the bf program is : 1.1081829071044922

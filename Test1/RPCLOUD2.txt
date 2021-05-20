@@ -1,0 +1,10 @@
+The total number of false positives in cuckoo are : 0
+The percentage of false positives in cuckoo is :0.0
+The total number of false positives in mbf are : 35944
+The percentage of false positives in mlbf is :36.306703972687146
+The total number of false positives in bf are : 49258
+The percentage of false positives in bf is :49.755052979262835
+The insertion time  of the mlbf program is : 16.790070056915283
+The insertion time  of the bf program is : 2.534818172454834
+The query time the mbf program is : 1.1223235130310059
+The query time the bf program is : 0.0977168083190918

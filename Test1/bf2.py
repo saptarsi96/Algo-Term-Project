@@ -30,7 +30,7 @@ class MultiBF:
 	def add(self,query):
 		query = query.replace("https://","")
 		query = query.replace("http://","")
-		query = query.split("/")
+		query = query.split(" ")
 		if len(query) > self.layers:
 			#print("adding more layers")
 			self.addLayers(len(query))	
@@ -45,7 +45,7 @@ class MultiBF:
 	def check(self,query):
 		query = query.replace("https://","")
 		query = query.replace("http://","")
-		query = query.split("/")
+		query = query.split(" ")
 		if len(query) > self.layers:
 			return False
 		laddr = [0]*self.hash_count
