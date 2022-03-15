@@ -1,7 +1,6 @@
 
 
-*Saptarsi Saha*            *Shailesh Navale*            *Madhur Navandar*  
-*2020H1030109*            *2020H1030169*                 *2020H1030163*    
+
 
 ##### Abstract: 
 
